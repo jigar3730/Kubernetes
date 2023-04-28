@@ -1,41 +1,41 @@
-  1  sudo apt get update
-    2  sudo apt-get update
-    3  exit
-    4  minikube start --vm-driver=docker --cni-calico
-    5  minikube start --vm-driver=docker --cni=calico
-    6  minikube status
-    7  minikube get all
-    8  minikube get-all
-    9  kubectl get a;;
-   10  kubectl get all
-   11  minikube dashboard
-   12  kubectl get all
-   13  kubectl create deploy myapp --image=nginx --replica=2
-   14  kubectl create deploy myapp --image=nginx --replicas=2
-   15  kubectl get all
-   16  source <(kubectl completion bash)
-   17  kubectl get a;;
-   18  kubectl get all
-   19  kubectl create deploy myapp --image-nginx --replicas=3 --dry-run=client -o yaml > myapp.yaml
-   20  kubectl create deploy myapp --image=nginx --replicas=3 --dry-run=client -o yaml > myapp.yaml
-   21  ls
-   22  cat myapp.yaml
-   23  clear
-   24  kubectl get all
-   25  kubectl apply -f myapp.yaml
-   26  kubectl get all
-   27  kubectl create deploy myapp --image=nginx --replicas=2 --dry-run=client -o yaml > myapp.yaml
-   28  kubectl get all
-   29  kubectl apply -f myapp.yaml
-   30  kubectl get all
-   31  kubectl create deployment my-dep --image=busybox
-   32  kubectl get all
-   33  clear
-   34  kubectl get all
-   35  kubectl delete deploy my-dep
-   36  kubectl delete de\loy my-dep
-   37  kubectl delete deploy my-dep
-   38  kubectl get all
+## Work in progress will update with commands and notes as i go 
+- Create docker container with node js
+- run local container 
+- Deploy workload to kubernetes
+
+
+minikube start --vm-driver=docker --cni=calico
+minikube status
+minikube get all
+kubectl get all
+minikube dashboard
+kubectl get all
+kubectl create deploy myapp --image=nginx --replica=2
+kubectl create deploy myapp --image=nginx --replicas=2
+kubectl get all
+source <(kubectl completion bash)
+kubectl get a;;
+kubectl get all
+kubectl create deploy myapp --image-nginx --replicas=3 --dry-run=client -o yaml > myapp.yaml
+kubectl create deploy myapp --image=nginx --replicas=3 --dry-run=client -o yaml > myapp.yaml
+ls
+cat myapp.yaml
+
+kubectl get all
+kubectl apply -f myapp.yaml
+kubectl get all
+kubectl create deploy myapp --image=nginx --replicas=2 --dry-run=client -o yaml > myapp.yaml
+kubectl get all
+kubectl apply -f myapp.yaml
+kubectl get all
+kubectl create deployment my-dep --image=busybox
+kubectl get all
+clear
+kubectl get all
+kubectl delete deploy my-dep
+kubectl delete de\loy my-dep
+kubectl delete deploy my-dep
+kubectl get all
    39  kubectl delete deploy firstnginx 
    40  kubectl
    41  kubectl get all
@@ -88,6 +88,4 @@
    88  cd .kube/
    89  ls
    90  nano config 
-   91  clear
-   92  exit
-   93  history
+
