@@ -45,7 +45,7 @@ Start minikube dashboard and review the deployments – feel free to explore das
 #### kubectl scale deployment nginx --replicas=10
 issue scale deployment to increase replicas to 10 and review the dashboard
 
-##Next Steps
+## Next Steps
 https://minikube.sigs.k8s.io/docs/tutorials/
 
 
