@@ -1,91 +1,49 @@
-## Work in progress will update with commands and notes as i go 
-- Create docker container with node js
-- run local container 
-- Deploy workload to kubernetes
+# Work in progress will update with commands and notes as i go 
+Simple list of commands to test out github codespace Minikube installation 
+### Commands to run
+- minikube status
+- minikube start
+- kubectl create deployment nginx --image=nginx:1.10.0 --replicas=3	
+- kubectl get pods	
+- kubectl expose deployment nginx --port 80 --type LoadBalancer	
+- kubectl get services	
+- minikube service nginx --url	
+- curl http://192.168.49.2:31967  (Update with url returned from above command )	
+- minikube dashboard	
+- kubectl scale deployment nginx --replicas=10	
 
 
-minikube start --vm-driver=docker --cni=calico
-minikube status
-minikube get all
-kubectl get all
-minikube dashboard
-kubectl get all
-kubectl create deploy myapp --image=nginx --replica=2
-kubectl create deploy myapp --image=nginx --replicas=2
-kubectl get all
-source <(kubectl completion bash)
-kubectl get a;;
-kubectl get all
-kubectl create deploy myapp --image-nginx --replicas=3 --dry-run=client -o yaml > myapp.yaml
-kubectl create deploy myapp --image=nginx --replicas=3 --dry-run=client -o yaml > myapp.yaml
-ls
-cat myapp.yaml
+#### minikube status  
+check the status of minikube see if its running if not start it
 
-kubectl get all
-kubectl apply -f myapp.yaml
-kubectl get all
-kubectl create deploy myapp --image=nginx --replicas=2 --dry-run=client -o yaml > myapp.yaml
-kubectl get all
-kubectl apply -f myapp.yaml
-kubectl get all
-kubectl create deployment my-dep --image=busybox
-kubectl get all
-clear
-kubectl get all
-kubectl delete deploy my-dep
-kubectl delete de\loy my-dep
-kubectl delete deploy my-dep
-kubectl get all
-   39  kubectl delete deploy firstnginx 
-   40  kubectl
-   41  kubectl get all
-   42  kubectl delete deploy myapp 
-   43  history
-   44  history > commands.txt
-   45  ls
-   46  ls -la
-   47  cat commands.txt 
-   48  kubectl get all
-   49  kubectl create deployment my-dep --image=busybox
-   50  kubectl get all
-   51  exit
-   52  minikube
-   53  podman
-   54  docker
-   55  git clone https://github.com/sandervanvugt/kubernetes
-   56  sudo apt install git
-   57  git clone https://github.com/sandervanvugt/kubernetes
-   58  cd kubernetes/
-   59  ls
-   60  ./minikube-docker-setup.sh
-   61  sudo reboot
-   62  kubectl
-   63  kubectl get all
-   64  minikube
-   65  history
-   66  minikube start -h
-   67  minikube start -h |less
-   68  minikube start -h | more
-   69  kubectl get a;;
-   70  kubectl get all
-   71  kubectl delete deployment my-dep
-   72  kubectl get all
-   73  kubectl create deployment --image=busybox --sleep=3600
-   74  kubectl create deployment --image=busybox -- sleep 3600
-   75  kubectl create deployment my-dep --image=busybox -- sleep 3600
-   76  kubectl get all
-   77  kubectl create ns secret
-   78  kubectl create deploy secret --image=nginx -n secret
-   79  kubectl get all
-   80  kubectl get all -n secret
-   81  kubectl get al-A
-   82  kubectl get all -A
-   83  clear
-   84  kubectl config view 
-   85  history
-   86  minikube start --vm-driver=docker --cni=calico
-   87  ls -la
-   88  cd .kube/
-   89  ls
-   90  nano config 
+#### minikube start
+Starts minikube 
 
+#### kubectl create deployment nginx --image=nginx:1.10.0 --replicas=3
+Starts simple nginx image and scales it to 3 pods 
+
+#### kubectl get pods
+lists all running pods
+
+
+
+#### kubectl expose deployment nginx --port 80 --type LoadBalancer
+expose deployment and create a service 
+
+#### kubectl get services
+Get list of services 
+ 
+#### minikube service nginx --url
+find the service URL and check if the page loads 
+
+#### curl http://XXX.XXX.XX.XX:XXXX  (Update with url returned from above command )  
+ 
+
+#### minikube dashboard
+Start minikube dashboard and review the deployments – feel free to explore dashboard
+
+#### kubectl scale deployment nginx --replicas=10
+issue scale deployment to increase replicas to 10 and review the dashboard
+
+
+ 
